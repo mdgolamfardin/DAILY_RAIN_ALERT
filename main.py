@@ -2,8 +2,6 @@ import requests
 from twilio.rest import Client
 import os
 
-rec_twilio = os.environ.get('REC_TWILIO')
-
 
 # OpenWeatherMap API endpoint for 5-day weather forecast (in 3-hour intervals, total of 40 reports)
 OWM_endpoint = f"https://api.openweathermap.org/data/2.5/forecast"
@@ -28,8 +26,6 @@ response = requests.get(url=OWM_endpoint, params=weather_params)
 
 # Parsing the JSON response from the API
 data = response.json()
-print(data)
-
 # Extracting the weather information from the response
 weather_list = data['list']
 
@@ -44,5 +40,4 @@ if len(rainy_weather_condition_codes) > 0:
         to=os.environ.get('USER_NUM'),
         body="It's gonna rain today, bring an umbrella."  # SMS message content
     )
-    print(message.status)  # Print the status of the sent message
 
