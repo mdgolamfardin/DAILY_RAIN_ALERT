@@ -48,3 +48,7 @@ export TO_NUM="user's_phone_number"
 
 ## Acknowledgments
 This project is a part of the course "100 Days of Code: The Complete Python Pro Bootcamp", taught by Dr. Angela Yu on Udemy.
+
+## Author
+
+[mdgolamfardin](https://github.com/mdgolamfardin)
